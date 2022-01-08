@@ -1,0 +1,13 @@
+apiVersion: v1 #specifying the api version
+kind: pod  #specifying the pod object
+metadata: # pod and specifying the namespace we want to create it on
+  name: nginx
+  web: name
+spec: # specifying the image and container name 
+  containers:
+    - name: nginx
+      image: nginx
+      command: [ngnix] #overriding the exsisting command
+      args: ["-g", "daemon off;", "-q"] # to run the pod on a quite mode
+      ports: 
+      - containerPort: 80 # exposing the container pod
