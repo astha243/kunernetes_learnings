@@ -28,10 +28,11 @@ ETCDCTL_API=3 etcdctl snapshot save /home/cloud_user/etcd_backup.db \
 restored the snapshot by creating a temporary cluster to store teh data in the data directory
 sudo ETCDCTL_API=3 etcdctl snapshot restore /home/cloud_user/etcd_backup.db \
   --initial-cluster etcd-restore=https://10.0.1.101:2380 \
-  --initial-advertise-peer-urls https://10.0.1.101:2380 \
+  --initial-advertise-peer-urls https://10.0.1.101:2380 \ #specifying the addresses the etcd member sould utilize to contact etcd
   --name etcd-restore \
   --data-dir /var/lib/etcd
 
 // what I learned from this lab?
-ETCD is a very important concept in kubernetetes as it is the hub for key.value data storage, the Kuberenete API directly communicates with ETCD cluster for any cli commands passed.
+ETCD is a very important concept in kubernetetes as it is the hub for key.value data storage, the Kuberenete API directly communicates with ETCD cluster to revert to 
+any cli commands passed.
 If the cluster falis we can utilize ETCD to save a snapshot of the data and restor it back.  

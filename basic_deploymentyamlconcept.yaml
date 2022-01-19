@@ -1,0 +1,22 @@
+# api version is where you specify what api version of the object that you want to use
+apiVersion :
+# this is where you specify what type of kubernetes service that you are deploying i.e. pods, replicasets 
+kind:
+# metadata is where you specify the object name and holistic defination of the object namespace or lables that you want to utilize
+metadata:
+   name:
+   lables:
+     app:
+# this is where you specify what containers that you are using, you can specify container name, image name, ports, pass arguments 
+spec:
+  containers:
+    - name:
+      image:
+      command:
+      args:
+      ports:
+
+# learning form this labs: mentioned above are the building block of any kubernetes deployemts
+#  my understanding from Python could also co-realte to these as apiVersion, Kind are strings value metadata, 
+#  spec are dictinary valuse which can we utilized to specify various attributes.
+ 
