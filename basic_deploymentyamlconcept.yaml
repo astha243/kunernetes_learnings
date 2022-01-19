@@ -17,6 +17,6 @@ spec:
       ports:
 
 # learning form this labs: mentioned above are the building block of any kubernetes deployemts
-#  my understanding from Python could also co-realte to these as apiVersion, Kind are strings value metadata, 
+#  my understanding from Python could also co-relate to these as apiVersion, Kind are strings value metadata, 
 #  spec are dictinary valuse which can we utilized to specify various attributes.
  
